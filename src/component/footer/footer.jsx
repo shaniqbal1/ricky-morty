@@ -18,11 +18,10 @@ function Footer() {
         <Link to={`/profile/${profile.id}`}>
           <Image
             width={40}
-            height={30}
+            height={40}
             src={profile.image}
             style={{
               borderRadius: "50%",
-              objectFit: "cover",
             }}
           />
           &nbsp;

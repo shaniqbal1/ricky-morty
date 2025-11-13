@@ -21,7 +21,7 @@ function MainLayout({ children }) {
       
       <AntHeader
         style={{
-          backgroundColor: "#1677ff",
+          backgroundColor: "#e0e0e0",
           padding: 0,
         }}
       >
@@ -43,15 +43,15 @@ function MainLayout({ children }) {
  <Divider />
       
       <AntFooter
-        
+
           style={{
-        backgroundColor: "#ede7e7e1",
+        backgroundColor: "#e0e0e0",
            color: "#168bceff",
         padding: "20px 0",
         position: "relative",
         bottom: 0,
-        width: "100%",         
-        overflow: "hidden",     
+        width: "100%",
+        overflow: "hidden",
       }}
       >
         <Footer />

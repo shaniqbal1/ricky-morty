@@ -35,7 +35,7 @@ function Card({ data }) {
         height: '120px',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between'
+        justifyContent: 'flex-start'
       }}
       style={{
         height: '340px',
@@ -54,7 +54,7 @@ function Card({ data }) {
             </Title>
             <Badge
               status={statusColors[data.status]}
-              style={{ marginLeft: '8px' }}
+              style={{ marginLeft: '8px' ,marginBottom: '13px'}}
             />
           </div>
         </Col>
