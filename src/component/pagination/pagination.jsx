@@ -6,7 +6,7 @@ function Paginatin(props) {
         {...props}
         style={{
           justifyContent: "flex-end",
-        paddingTop:"13px"
+        paddingTop:"60px"
         }}
       />
     </>
