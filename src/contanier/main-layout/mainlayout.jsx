@@ -32,8 +32,8 @@ function MainLayout({ children }) {
       <Content
         style={{
           flex: 1,
-          backgroundColor: "#f8efef",
-         
+          backgroundColor: "#ffffff",
+
           boxSizing: "border-box",
           overflowX: "hidden",
         }}

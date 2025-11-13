@@ -2,7 +2,7 @@
 import { Row, Col } from "antd";
 import { Link } from "react-router";
 import { useSelector } from "react-redux";
-import Image  from "../image-/img"
+import Image  from "../image/image"
 import Heading from "../heading/heading";
 function Footer() {
  const recentVisitedProfiles = useSelector(

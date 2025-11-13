@@ -3,7 +3,7 @@ import Heading from "../../component/heading/heading";
 import Homepage from "../../contanier/homepage/homepage";
 import { Link, useParams } from "react-router";
 import { Row, Col } from "antd";
-import Imag from "../../component/image-/img";
+import Imag from "../../component/image/image";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import CustomTypography from "../../component/typography/typography";
 import { useEffect } from "react";
