@@ -3,6 +3,7 @@ const initialState = {
   profile:[],
   characters: [],
   status: "",
+  error: null,
   pagination: {
     count: 0,
     pages: 0,
@@ -44,6 +45,7 @@ export const characterSlice = createSlice({
     extraReducers: (builder) => {
     builder.addCase(fetchCharacters.pending, (state) => {
       state.status=  "pending"
+      state.error = null;
     })
     .addCase(fetchCharacters.fulfilled, (state, action) => {
       state.status = "fulfilled"
@@ -55,13 +57,24 @@ export const characterSlice = createSlice({
         prev: action.payload.info.prev,
 
       }
+      state.error = null;
+    })
+    .addCase(fetchCharacters.rejected, (state, action) => {
+      state.status = "rejected";
+      state.error = action.error.message;
     })
      builder.addCase(fetchProfile.pending, (state) => {
       state.status = "pending";
+      state.error = null;
     })
     .addCase(fetchProfile.fulfilled, (state, action) => {
       state.status = "fulfilled";
       state.profile = action.payload;
+      state.error = null;
+    })
+    .addCase(fetchProfile.rejected, (state, action) => {
+      state.status = "rejected";
+      state.error = action.error.message;
     });
   },
 });
@@ -82,4 +95,6 @@ export const SelectPagination = (state) => state.characters.pagination;
 export const SelectData = (state) => state.characters.characters.results;
 export const SelectSinglecharacter =(state)=> state.characters.profile;
 export const selectSearchque = (state) => state.characters.querySearch;
+export const selectError = (state) => state.characters.error;
+export const selectStatus = (state) => state.characters.status;
 export const {setRecentProfiles} = characterSlice.actions
